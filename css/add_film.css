@@ -1,0 +1,274 @@
+.group:after 
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#form-shadow
+{
+    margin: 50px 10% 0 10%; 
+    background-color: #DFE8F6;;
+    padding: 10px;
+}
+
+#add-form
+{
+    margin-top: 0;
+    background-color: #fff;
+    border: 1px solid #0E4FA8;  
+    color: #333;
+    font-family: Verdana, sans-serif;
+}
+#text-fields
+{
+    float: left;
+}
+
+#add-form > #text-fields > form ul
+{
+    list-style: none;
+}
+
+#text-fields ul > li
+{
+    padding-bottom: 35px;
+    margin-bottom: 15px;
+    line-height: 25px;
+}
+
+#text-fields ul > li:last-child
+{
+	padding-bottom: 0px;
+}
+
+#text-fields ul > li > textarea
+{
+	resize: none;
+	width: 300px;
+	margin-left: 50px;
+}
+
+#text-fields ul > li:nth-child(2)
+{
+    padding-bottom: 10px;
+	
+}
+
+#text-fields ul > li:nth-child(2) > p
+{
+	width: 350px;
+	padding-left: 10px
+}
+
+#text-fields ul > li:nth-child(4)
+{
+    padding-bottom: 10px;
+}
+
+#text-fields ul li > b
+{
+    float: left;
+}
+
+#text-fields ul li > input[type="radio"]
+{    
+    width: 20px;
+}
+
+#text-fields ul > li > button
+{
+    position: relative;
+    left: 329px;
+	top: 50px;
+    float: left;
+    height: 31px;
+}
+
+#text-fields ul li > input
+{
+    float: right;
+    height: 25px;
+    width: 300px;
+    margin-left: 24px;
+}
+
+#text-fields ul li > input[type="file"]
+{
+    width: 305px;
+}
+
+#text-fields ul li > p
+{
+    margin: 0 0 0 29%;
+}
+
+#text-fields ul li > select
+{
+    width: 305px;
+    height: 30px;
+    float: right;
+	margin-right: -20px;
+}
+
+#text-fields center
+{
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+
+#text-fields ul li > p > input
+{
+    margin-left: 13px;
+}
+
+#text-fields ul li > #add-genre-field
+{
+	float: right;
+	margin-right:  52px;
+	width: 252px;
+	
+}
+
+text fields ul li > a
+{
+    background-color: #000;
+    display: inline;
+    z-index: 9999;
+}
+
+#add-form #block-logo
+{
+    float: right;
+	width: 200px;
+    margin: 2% 4% 0 0;
+}
+
+#add-form #block-logo > sub
+{
+	display: none;
+	padding-left: 50px; 
+}
+
+#add-form form > button
+{
+    width: 30%;
+	margin: 0 60% 10px;
+    background-color: #fff;
+    font-family: 'Oswald', sans-serif;
+	font-size: 17px;
+    height: 40px;
+    background: #0E4FA8;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+
+#add-form form > button:hover
+{
+    background-color: #2070dc; 
+}
+
+#footer
+{
+    margin-top: 230px;
+}
+
+#add-director-form
+{
+    display: none;
+    position: fixed;
+    top: 200px;
+    width: 800px;
+    vertical-align: middle;
+	margin-left: 85px;
+    height: 500px;
+    background-color: #fff;
+    background-color: #fff;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+	font-family: "Verdana", sans-serif;
+}
+
+#add-director-form > a
+{
+    float: right;
+    line-height: 17px;
+    padding: 0px;
+    margin: 15px;
+    font-size: 20px;
+}
+
+#add-director-form > a:hover
+{
+    color: #0E4FA8;
+    cursor: pointer;
+}
+
+#add-director-form > #title
+{
+	font-family: "Oswald", sans-serif;
+	font-size: 25px;
+	text-align: center;
+	margin-top: 15px;
+}
+
+#add-director-form #add-director > ul > li
+{
+	list-style: none;
+	height: 50px; 
+}
+
+#add-director-form #add-director > ul > li > input[type="text"]
+{
+	width: 300px;
+	height: 25px;
+}
+
+#add-director-form #add-director-block
+{
+	padding-top: 30px;
+}
+
+#add-director-form #add-director > ul > li > b
+{
+	display: block;
+	width: 150px;
+	float: left;
+}
+
+#add-director-form #add-director > ul > li > input
+{
+	float: left;
+}
+
+#add-director-form form > button
+{
+    width: 30%;
+    margin: 60px 35% 0;
+    background-color: #fff;
+    font-family: 'Oswald', sans-serif;
+	font-size: 17px;
+    height: 40px;
+    background: #0E4FA8;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+
+#add-director-form form > button:hover
+{
+    background-color: #2070dc; 
+}
+
+#add-director-form #block-photo
+{
+	float: right;
+	left: 970px;
+	width: 250px;
+}
+
+#add-director-form #block-photo > sub
+{
+	display: none;
+	padding-left: 60px;
+}

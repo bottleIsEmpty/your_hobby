@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+#signin-shadow
+{
+	margin-left: 20%;
+	margin-right: 20%;
+	background-color: #DFE8F6;
+	padding: 10px; 
+}
+
+#signin
+{
+	background-color: #fff;
+	border: 1px solid #0E4FA8;
+	font-family: 'Verdana', regular;
+	font-size: 12px;
+}
+
+#content
+{
+	margin-top: 50px;
+}
+
+#sign-greets
+{
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	font-size: 25px;
+	margin-top: 20px; 
+}
+
+#greet-message
+{
+	margin: 2% 15%;
+	text-align: center;
+	color: #787d87;
+	border-bottom: 1px solid #E7E7E7;
+}
+
+.signin-text
+{
+	margin-left: 15%;
+	margin-top: 20px;
+	margin-bottom: 3px; 
+}
+
+#signin input[type="text"], #signin input[type="password"]
+{
+	width: 70%;
+	height: 30px;
+	margin: 0 15%;
+	text-align: center;
+	font-size: 18px;
+}
+
+#signin button
+{
+	font-family: 'Oswald', sans-serif;
+	font-size: 17px;
+	margin: 20px 35%;
+	width: 30%;
+	height: 40px;
+	background: #0E4FA8;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+
+#signin button:hover
+{
+	background-color: #2070dc; 
+}
+
+#error
+{
+	margin-top: 10px;
+	/*display: none;*/
+	text-align: center;
+	color: red;
+	font-family: 'Verdana', regular;
+	font-size: 15px;
+}
+
+#footer
+{
+	margin-top: 300px;
+}
