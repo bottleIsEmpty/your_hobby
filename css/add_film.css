@@ -111,6 +111,28 @@
 	margin-right: -20px;
 }
 
+#text-fields #quicksearch
+{
+	display: none;
+	position: relative;
+	width: 302px;
+	border: 1px solid grey;
+	left: 149px;
+	top: 30px;
+}
+
+#text-fields #quicksearch > ul
+{
+	padding: 0;
+	margin: 0;
+}
+
+
+#text-fields #quicksearch > ul > li:hover
+{
+	background-color: blue;
+}
+
 #text-fields center
 {
     margin-top: -15px;

@@ -39,12 +39,10 @@ $('input[type="file"]').change(function(event) {
     if (!file.type.match('image.*')) {
         alert("Некорректный файл!");
         $(this).prop("value", null);
-        return false;
     }
     if (file.size > 2097152) {
         alert("Файл не должен превышать 2мб");
         $(this).prop("value", null);
-        return false;
     }
 	
     var reader = new FileReader();
@@ -62,7 +60,7 @@ $('input[type="file"]').change(function(event) {
     reader.readAsDataURL(file);
 });
 
-$("#add-director").submit(function (event) {
+$("#add-director").submit(function(event) {
 
 	event.preventDefault();
 	
@@ -89,6 +87,15 @@ $("#add-director").submit(function (event) {
 			$("#error").html(answer);
 		}
 	});
+});
+
+$("#director-field").autocomplete({
+	source: "php/quicksearch.php?table=directors",
+	minLength: 3
+})
+
+$("#quicksearch ul li").click(function(event) {
+	$("#director-field").val($(this).text());
 })
 
 var checkDirName = function() {

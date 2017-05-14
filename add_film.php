@@ -3,6 +3,7 @@
 <head>
 	<title>Добавить фильм</title>
 	<link rel="stylesheet" type="text/css" href="css/add_film.css">
+	<link rel="stylesheet" type="text/css" href="scripts/jquery-ui-1.12.1.custom/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 </head>
 <body>
@@ -46,8 +47,15 @@
                                     </select>
                                 </li>
                                 <li><b>Год:</b><input type="number" value="2017"></li>
-                                <li><b>Режиссёр:</b><input type="text">
+                                <li><b>Режиссёр:</b><input type="text" id="director-field">
+                                <div id="quicksearch">
+									<ul>
+										<li>пока что ничего нет</li>
+										<li>Запись намба ту</li>
+									</ul>
+                                </div>
                                 </li>
+                                
                                 <center>
                                     <sup>Не нашли нужного режиссёра? <a href="#" onclick="openWindow()">Добавить режиссёра</a>
                                     </sup>
@@ -91,6 +99,7 @@
 	</div>
 	<?php require_once("blocks/footer.php") ?>
 	<script src="scripts/jquery-3.2.0.js"></script>
+	<script src="scripts/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
 	<script src="scripts/add_film.js"></script>
 </body>
 </html>
