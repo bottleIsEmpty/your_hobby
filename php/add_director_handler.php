@@ -31,7 +31,7 @@
 
 	if (mysqli_num_rows($query)) {
 		mysqli_close($db);
-		die('Указанный режиссёр существует');
+		die('Указанный режиссёр уже существует');
 	} else {
 		mysqli_query($db, "INSERT INTO directors (name, surname, photo) VALUES ('$name', '$surname', '$photoname')");
 		if (!mysqli_error($db)) {
