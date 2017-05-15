@@ -64,7 +64,7 @@ $("#add-director").submit(function(event) {
 
 	event.preventDefault();
 	
-	if (!checkDirName() || !checkDirSurname()) {
+	if (!checkField($("#dir-name"), 'name') || !checkField($("#dir-surname"), 'name')) {
 		return false;
 	}
 	
@@ -98,26 +98,25 @@ $("#quicksearch ul li").click(function(event) {
 	$("#director-field").val($(this).text());
 })
 
-var checkDirName = function() {
-	var name = $("#dir-name").val();
+var checkField = function(field, type) {
+	var value = field.val();
+	var exp;						//выражение для проверки
+	var minSize = 2, maxSize = 100;	//минимальный, максимальный размер строки
 	
-	if (!name.match(/^[0-9а-я-]/i) || name.length < 2) {
-		$("#dir-name").css("border", "1px solid red");
-		return false;
-	} else {
-		$("#dir-name").css("border", "");
-		return true;
+	switch (type) {
+		case 'name':
+			exp = /^[0-9а-я-]/i;
+				break;
+		case 'film-name': 
+			exp = /^[0-9а-яa-z-\s]/i;
+				break;
 	}
-}
-
-var checkDirSurname = function() {
-	var surname = $("#dir-surname").val();
 	
-	if (!surname.match(/^[0-9а-я-]/i) || surname.length < 2) {
-		$("#dir-surname").css("border", "1px solid red");
+	if (!value.match(exp) || value.length < minSize || value.length > maxSize) {
+		field.css("border", "1px solid red");
 		return false;
 	} else {
-		$("#dir-surname").css("border", "");
+		field.css("border", "");
 		return true;
 	}
 }
