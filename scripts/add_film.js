@@ -60,6 +60,7 @@ $('input[type="file"]').change(function(event) {
     reader.readAsDataURL(file);
 });
 
+
 $("#add-director").submit(function(event) {
 
 	event.preventDefault();
@@ -97,6 +98,8 @@ $("#director-field").autocomplete({
 $("#quicksearch ul li").click(function(event) {
 	$("#director-field").val($(this).text());
 })
+
+//Проверка поля ввода
 
 var checkField = function(field, type) {
 	var value = field.val();

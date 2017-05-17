@@ -10,7 +10,6 @@
 	<div id="wrapper">
 		<?php
 			require_once('php/database_connection.php');
-			$isAuth = isset($_SESSION['id']) ? true : false;
 			$text = "Добавление нового фильма";
 			require_once('blocks/header.php');
 		?>

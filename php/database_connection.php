@@ -8,4 +8,5 @@
 	if (!session_start()) {
 		die ("Ошибка сессии");
 	}
+	$isAuth = isset($_SESSION['id']) ? true : false;
 ?>
