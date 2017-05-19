@@ -46,14 +46,7 @@
                                     </select>
                                 </li>
                                 <li><b>Год:</b><input type="number" value="2017"></li>
-                                <li><b>Режиссёр:</b><input type="text" id="director-field">
-                                <div id="quicksearch">
-									<ul>
-										<li>пока что ничего нет</li>
-										<li>Запись намба ту</li>
-									</ul>
-                                </div>
-                                </li>
+                                <li><b>Режиссёр:</b><input type="text" id="director-field"></li>
                                 
                                 <center>
                                     <sup>Не нашли нужного режиссёра? <a href="#" onclick="openWindow()">Добавить режиссёра</a>
@@ -62,7 +55,7 @@
                                 <li><b>Постер:</b><input type="file" id="film-logo"></li>
                                 <li>
                                 	<b>Описание:</b>
-                                	<textarea name="description" id="" cols="30" rows="10"></textarea>
+                                	<textarea name="description" id="film-description" cols="30" rows="10"></textarea>
                             </ul>
                             <button type="submit" id="add-film">Добавить фильм</button>
 		                </form>

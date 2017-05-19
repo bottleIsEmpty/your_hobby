@@ -10,13 +10,13 @@ var openWindow = function() {
 
 var addGenre = function() {
     var exp = new RegExp($("#add-genre-field").val());
-    if (!($("#genre-field").val().match(exp))) {
-        $("#genre-field").val($("#genre-field").val() + $("#add-genre-field").val() + ", ");
+    if (!($("#film-genre").val().match(exp))) {
+        $("#film-genre").val($("#film-genre").val() + $("#add-genre-field").val() + ", ");
     }
 }
 
 var removeGenre = function() {
-    $("#genre-field").val($("#genre-field").val().replace($("#add-genre-field").val() + ", ", ""));
+    $("#film-genre").val($("#film-genre").val().replace($("#add-genre-field").val() + ", ", ""));
 }
 
 var removePhoto = function() {
@@ -101,11 +101,17 @@ $("#quicksearch ul li").click(function(event) {
 
 //Обработчик кнопки "Добавить фильм"
 
-$("add-film").click(function(event) {
+$("#add-film").click(function(event) {
     event.preventDefault();
     
-    if (!checkField($("film-name").val(), "film-name")
-        || !checkField(""))
+    if (!checkField($("#film-name"), "film-name")
+        || !checkField($("#film-genre"), "name") 
+        || !checkField($("#film-description"))) {
+        return false;
+    }
+    
+    data = new FormData();
+    data.append("")
 })
 
 //Проверка поля ввода
@@ -117,14 +123,18 @@ var checkField = function(field, type) {
 	
 	switch (type) {
 		case 'name':
-			exp = /^[0-9а-я-]/i;
+			exp = /^[а-я-]/i;
 				break;
 		case 'film-name': 
 			exp = /^[0-9а-яa-z-\s]/i;
 				break;
+        case 'description':
+            exp = /^[0-9а-яa-z-\s]/i;
+            minSize = 50;
+                break;
 	}
 	
-	if (!value.match(exp) || value.length < minSize || value.length > maxSize) {
+	if (value.length < minSize || value.length > maxSize || !value.match(exp)) {
 		field.css("border", "1px solid red");
 		return false;
 	} else {
