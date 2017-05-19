@@ -10,13 +10,13 @@ var openWindow = function() {
 
 var addGenre = function() {
     var exp = new RegExp($("#add-genre-field").val());
-    if (!($("#genre").val().match(exp))) {
-        $("#genre").val($("#genre").val() + $("#add-genre-field").val() + ", ");
+    if (!($("#genre-field").val().match(exp))) {
+        $("#genre-field").val($("#genre-field").val() + $("#add-genre-field").val() + ", ");
     }
 }
 
 var removeGenre = function() {
-    $("#genre").val($("#genre").val().replace($("#add-genre-field").val() + ", ", ""));
+    $("#genre-field").val($("#genre-field").val().replace($("#add-genre-field").val() + ", ", ""));
 }
 
 var removePhoto = function() {
@@ -97,6 +97,15 @@ $("#director-field").autocomplete({
 
 $("#quicksearch ul li").click(function(event) {
 	$("#director-field").val($(this).text());
+})
+
+//Обработчик кнопки "Добавить фильм"
+
+$("add-film").click(function(event) {
+    event.preventDefault();
+    
+    if (!checkField($("film-name").val(), "film-name")
+        || !checkField(""))
 })
 
 //Проверка поля ввода

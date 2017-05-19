@@ -19,7 +19,7 @@
 		            <div id="text-fields">
                         <form id="film-form" method="POST">
                             <ul>
-                                <li><b>Название:</b><input type="text"></li>
+                                <li><b>Название:</b><input type="text" id="film-name"></li>
                                 <li><b>Тип:</b>
                                     <p>
                                         <input type="radio" name="type" checked>Фильм
@@ -28,7 +28,7 @@
                                     </p>
                                 </li>
                                 <li><b>Жанры:</b>
-                                   <input type="text" id="genre" disabled>
+                                   <input type="text" id="film-genre" disabled>
                                    <button type="button" id="add-genre" onclick="addGenre()"><i class="fa fa-plus" aria-hidden="true"></i></button>
                                    <button type="button" onclick="removeGenre()" id="remove-genre"><i class="fa fa-minus" aria-hidden="true"></i></button>
                                     
