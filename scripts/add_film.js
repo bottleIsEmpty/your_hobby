@@ -1,4 +1,4 @@
-var photo;
+var photo;	//переменная для хранения фото
 
 var closeWindow = function() {
 	$("#background").fadeOut();
@@ -33,10 +33,40 @@ var removeLogo = function() {
 	$("#film-logo").prop("value", null);
 }
 
+var checkField = function(field, type) {
+	var value = field.val();
+	var exp;						//regExp для проверки
+	var minSize = 2, maxSize = 100;	//минимальный, максимальный размер строки
+	
+	switch (type) {
+		case 'name':
+			exp = /^[-а-я]/i;
+				break;
+		case 'film-name': 
+			exp = /^[-0-9а-яa-z\s]/i;
+		  		break;
+        case 'description':
+            exp = /^[^\^<>\|{}\\]/i;
+            minSize = 50;
+			maxSize = 3000;
+                break;
+	}
+	
+	if (value.length < minSize || value.length > maxSize || !value.match(exp)) {
+		field.css("border", "1px solid red");
+		return false;
+	} else {
+		field.css("border", "");
+		return true;
+	}
+}
+
 $("#background").dblclick(function(event) {
 	$("#background").fadeOut();
     $("#add-director-form").fadeOut();
 })
+
+//Обработчик добавления картинки
 
 $('input[type="file"]').change(function(event) {
 	event.preventDefault;
@@ -69,6 +99,7 @@ $('input[type="file"]').change(function(event) {
     reader.readAsDataURL(file);
 });
 
+//Обработчик кнопки "Добавить режиссёра"
 
 $("#add-director").submit(function(event) {
 
@@ -99,14 +130,12 @@ $("#add-director").submit(function(event) {
 	});
 });
 
+//Быстрый поиск
+
 $("#director-field").autocomplete({
 	source: "php/quicksearch.php?table=directors",
 	minLength: 3
-})
-
-$("#quicksearch ul li").click(function(event) {
-	$("#director-field").val($(this).text());
-})
+});
 
 //Обработчик кнопки "Добавить фильм"
 
@@ -147,34 +176,7 @@ $("#add-film").click(function(event) {
 			$("html").html(answer);
 		}
 	})
-})
+});
 
 //Проверка поля ввода
 
-var checkField = function(field, type) {
-	var value = field.val();
-	var exp;						//regExp для проверки
-	var minSize = 2, maxSize = 100;	//минимальный, максимальный размер строки
-	
-	switch (type) {
-		case 'name':
-			exp = /^[-а-я]/i;
-				break;
-		case 'film-name': 
-			exp = /^[-0-9а-яa-z\s]/i;
-		  		break;
-        case 'description':
-            exp = /^[^\^<>\|{}\\]/i;
-            minSize = 50;
-			maxSize = 3000;
-                break;
-	}
-	
-	if (value.length < minSize || value.length > maxSize || !value.match(exp)) {
-		field.css("border", "1px solid red");
-		return false;
-	} else {
-		field.css("border", "");
-		return true;
-	}
-}
