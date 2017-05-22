@@ -21,10 +21,11 @@
                             <ul>
                                 <li><b>Название:</b><input type="text" id="film-name"></li>
                                 <li><b>Тип:</b>
-                                    <p>
-                                        <input type="radio" name="type" checked>Фильм
-                                        <input type="radio" name="type">Сериал
-                                        <input type="radio" name="type">Мультфильм
+                                    <p id="type-radio">
+                                        <input type="radio" name="type" value="f" checked id="film-rd">
+                                        <label for="film-rd">Фильм</label>
+                                        <input type="radio" name="type" value="s" id="serial-rd">
+                                        <label for="serial-rd">Сериал</label>
                                     </p>
                                 </li>
                                 <li><b>Жанры:</b>
@@ -42,6 +43,7 @@
                                         <option value="Вестерн">Вестерн</option>
                                         <option value="Боевик">Боевик</option>
                                         <option value="Триллер">Триллер</option>
+                                        <option value="Мультфильм">Мультфильм</option>
                                         <option value="Аниме">Аниме</option>
                                     </select>
                                 </li>
@@ -69,26 +71,8 @@
 		        </div>
 		    </div>
 		</div>
-		<div id="add-director-form">
-            <a onclick="closeWindow()"><i class="fa fa-times" aria-hidden="true"></i></a>
-            <div id="title">Добавить режиссёра</div>
-            <div id="add-director-block">
-            	<div id="block-photo">
-					<img src="images/nophoto.jpg" width="200px" id="photo">
-					<sub id="delete-photo"><a href="#" onclick="removePhoto()">Удалить фото</a></sub>
-            	</div>
-				<form action="" id="add-director">
-					<ul>
-						<li><b>Имя: </b><input type="text" id="dir-name"></li>
-						<li><b>Фамилия: </b><input type="text" id="dir-surname"></li>
-						<li><b>Фото: </b><input type="file" id="dir-photo"></li>
-					</ul>
-					<p id="error"></p>
-					<button type="submit">Добавить</button>
-				</form>
-            </div>
-        </div>
 	</div>
+	<?php require_once("blocks/add_director.php") ?>
 	<?php require_once("blocks/footer.php") ?>
 	<script src="scripts/jquery-3.2.0.js"></script>
 	<script src="scripts/jquery-ui-1.12.1.custom/jquery-ui.js"></script>

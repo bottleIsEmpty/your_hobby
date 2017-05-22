@@ -1,10 +1,12 @@
 var photo;
 
 var closeWindow = function() {
+	$("#background").fadeOut();
     $("#add-director-form").fadeOut();
 };
 
 var openWindow = function() {
+	$("#background").fadeIn();
     $("#add-director-form").fadeIn();
 }
 
@@ -31,6 +33,11 @@ var removeLogo = function() {
 	$("#film-logo").prop("value", null);
 }
 
+$("#background").dblclick(function(event) {
+	$("#background").fadeOut();
+    $("#add-director-form").fadeOut();
+})
+
 $('input[type="file"]').change(function(event) {
 	event.preventDefault;
 	photo = this.files[0];
@@ -39,10 +46,12 @@ $('input[type="file"]').change(function(event) {
     if (!file.type.match('image.*')) {
         alert("Некорректный файл!");
         $(this).prop("value", null);
+		return false;
     }
     if (file.size > 2097152) {
         alert("Файл не должен превышать 2мб");
         $(this).prop("value", null);
+		return false;
     }
 	
     var reader = new FileReader();
@@ -104,33 +113,60 @@ $("#quicksearch ul li").click(function(event) {
 $("#add-film").click(function(event) {
     event.preventDefault();
     
-    if (!checkField($("#film-name"), "film-name")
-        || !checkField($("#film-genre"), "name") 
-        || !checkField($("#film-description"))) {
+	var name = $("#film-name");
+	var genres = $("#film-genre");
+	var director = $("#director-field");
+	var type = $("#film-rd").prop("checked") ? "f" : "s";
+	var year = $("#director-field")
+	var description = $("#film-description");
+	
+    if (!checkField(name, "film-name")
+		|| !checkField(genres, "name")
+		|| !checkField(director, "name")
+        || !checkField(description, "description")) {
         return false;
     }
     
     data = new FormData();
-    data.append("")
+	data.append("name", name.val());
+	data.append("type", type);
+	data.append("genres", genres.val());
+	data.append("year", year.val());
+	data.append("director", director.val());
+	data.append("logo", photo);
+	data.append("description", description.val());
+	
+	$.ajax({
+		url: "php/add_film_handler.php",
+		cache: false,
+		type: "POST",
+		processData: false,
+		contentType: false,
+		data: data,
+		success: function(answer){
+			$("html").html(answer);
+		}
+	})
 })
 
 //Проверка поля ввода
 
 var checkField = function(field, type) {
 	var value = field.val();
-	var exp;						//выражение для проверки
+	var exp;						//regExp для проверки
 	var minSize = 2, maxSize = 100;	//минимальный, максимальный размер строки
 	
 	switch (type) {
 		case 'name':
-			exp = /^[а-я-]/i;
+			exp = /^[-а-я]/i;
 				break;
 		case 'film-name': 
-			exp = /^[0-9а-яa-z-\s]/i;
-				break;
+			exp = /^[-0-9а-яa-z\s]/i;
+		  		break;
         case 'description':
-            exp = /^[0-9а-яa-z-\s]/i;
+            exp = /^[^\^<>\|{}\\]/i;
             minSize = 50;
+			maxSize = 3000;
                 break;
 	}
 	
