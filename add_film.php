@@ -39,6 +39,8 @@
                                         <option value="Драма">Драма</option>
                                         <option value="Комедия">Комедия</option>
                                         <option value="Ужасы">Ужасы</option>
+                                        <option value="Фэнтези">Фэнтези</option>
+                                        <option value="Фантастика">Фантастика</option>
                                         <option value="Для детей">Для детей</option>
                                         <option value="Вестерн">Вестерн</option>
                                         <option value="Боевик">Боевик</option>
