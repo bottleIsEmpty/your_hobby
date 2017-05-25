@@ -145,6 +145,7 @@ $("#director-field").autocomplete({
 
 $("#add-film").click(function (event) {
     event.preventDefault();
+<<<<<<< HEAD
 
     var name = $("#film-name");
     var genres = $("#film-genre");
@@ -157,10 +158,25 @@ $("#add-film").click(function (event) {
         !checkField(genres, "name") ||
         !checkField(director, "name") ||
         !checkField(description, "description")) {
+=======
+    
+	var name = $("#film-name");
+	var genres = $("#film-genre");
+	var director = $("#director-field");
+	var type = $("#film-rd").prop("checked") ? "f" : "s";
+	var year = $("#year-field")
+	var description = $("#film-description");
+	
+    if (!checkField(name, "film-name")
+		|| !checkField(genres, "name")
+		|| !checkField(director, "name")
+        || !checkField(description, "description")) {
+>>>>>>> 8c9d5d39096c5e1bfcbd0810fc638ee14de8b65a
         return false;
     }
 
     data = new FormData();
+<<<<<<< HEAD
     data.append("name", name.val());
     data.append("type", type);
     data.append("genres", genres.val());
@@ -180,4 +196,25 @@ $("#add-film").click(function (event) {
             $("#response").html(answer).fadeIn();
         }
     })
+=======
+	data.append("name", name.val());
+	data.append("type", type);
+	data.append("genres", genres.val());
+	data.append("year", year.val());
+	data.append("director", director.val());
+	data.append("logo", photo);
+	data.append("description", description.val());
+	
+	$.ajax({
+		url: "php/add_film_handler.php",
+		cache: false,
+		type: "POST",
+		processData: false,
+		contentType: false,
+		data: data,
+		success: function(answer){
+			$("#response").html(answer);
+		}
+	})
+>>>>>>> 8c9d5d39096c5e1bfcbd0810fc638ee14de8b65a
 });

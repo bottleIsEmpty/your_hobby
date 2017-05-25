@@ -121,10 +121,26 @@
     margin-left: 13px;
 }
 
+<<<<<<< HEAD
 #text-fields ul li>#add-genre-field {
     float: right;
     margin-right: 52px;
     width: 252px;
+=======
+#text-fields ul li > #add-genre-field
+{
+	float: right;
+	margin-right:  52px;
+	width: 252px;
+	
+}
+
+#text-fields > #response
+{
+    text-align: center;
+    float: left; 
+    display: none;
+>>>>>>> 8c9d5d39096c5e1bfcbd0810fc638ee14de8b65a
 }
 
 #add-form #block-logo {
