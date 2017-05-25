@@ -1,132 +1,149 @@
-.group:after {
-    content: "";
-    display: table;
-    clear: both;
+.group:after 
+{
+  content: "";
+  display: table;
+  clear: both;
 }
 
-#form-shadow {
-    margin: 50px 10% 0 10%;
-    background-color: #DFE8F6;
-    ;
+#form-shadow
+{
+    margin: 50px 10% 0 10%; 
+    background-color: #DFE8F6;;
     padding: 10px;
 }
 
-#add-form {
+#add-form
+{
     margin-top: 0;
     background-color: #fff;
-    border: 1px solid #0E4FA8;
+    border: 1px solid #0E4FA8;  
     color: #333;
     font-family: Verdana, sans-serif;
 }
-
-#text-fields {
+#text-fields
+{
     float: left;
 }
 
-#add-form>#text-fields>form ul {
+#add-form > #text-fields > form ul
+{
     list-style: none;
 }
 
-#text-fields ul>li {
+#text-fields ul > li
+{
     padding-bottom: 35px;
     margin-bottom: 15px;
     line-height: 25px;
 }
 
-#text-fields ul>li:last-child {
-    padding-bottom: 0px;
+#text-fields ul > li:last-child
+{
+	padding-bottom: 0px;
 }
 
-#text-fields ul>li>textarea {
-    resize: none;
-    width: 300px;
-    margin-left: 50px;
+#text-fields ul > li > textarea
+{
+	resize: none;
+	width: 300px;
+	margin-left: 50px;
 }
 
-#text-fields ul>li:nth-child(2) {
+#text-fields ul > li:nth-child(2)
+{
+    padding-bottom: 10px;
+	
+}
+
+#text-fields ul > li:nth-child(2) > p
+{
+	width: 350px;
+	padding-left: 10px
+}
+
+#text-fields ul > li:nth-child(4)
+{
     padding-bottom: 10px;
 }
 
-#text-fields ul>li:nth-child(2)>p {
-    width: 350px;
-    padding-left: 10px
-}
-
-#text-fields ul>li:nth-child(4) {
-    padding-bottom: 10px;
-}
-
-#text-fields ul li>b {
+#text-fields ul li > b
+{
     float: left;
 }
 
-#text-fields ul li>input[type="radio"] {
+#text-fields ul li > input[type="radio"]
+{    
     width: 20px;
 }
 
-#text-fields ul>li>button {
+#text-fields ul > li > button
+{
     position: relative;
     left: 329px;
-    top: 50px;
+	top: 50px;
     float: left;
     height: 31px;
 }
 
-#text-fields ul li>input {
+#text-fields ul li > input
+{
     float: right;
     height: 25px;
     width: 300px;
     margin-left: 24px;
 }
 
-#text-fields ul li>input[type="file"] {
+#text-fields ul li > input[type="file"]
+{
     width: 305px;
 }
 
-#text-fields ul li>p {
+#text-fields ul li > p
+{
     margin: 0 0 0 29%;
 }
 
-#text-fields ul li>select {
+#text-fields ul li > select
+{
     width: 305px;
     height: 30px;
     float: right;
-    margin-right: -20px;
+	margin-right: -20px;
 }
 
-#text-fields #quicksearch {
-    display: none;
-    position: relative;
-    width: 302px;
-    border: 1px solid grey;
-    left: 149px;
-    top: 30px;
+#text-fields #quicksearch
+{
+	display: none;
+	position: relative;
+	width: 302px;
+	border: 1px solid grey;
+	left: 149px;
+	top: 30px;
 }
 
-#text-fields #quicksearch>ul {
-    padding: 0;
-    margin: 0;
+#text-fields #quicksearch > ul
+{
+	padding: 0;
+	margin: 0;
 }
 
-#text-fields #quicksearch>ul>li:hover {
-    background-color: blue;
+
+#text-fields #quicksearch > ul > li:hover
+{
+	background-color: blue;
 }
 
-#text-fields center {
+#text-fields center
+{
     margin-top: -15px;
     margin-bottom: 15px;
 }
 
-#text-fields ul li>p>input {
+#text-fields ul li > p > input
+{
     margin-left: 13px;
 }
 
-<<<<<<< HEAD
-#text-fields ul li>#add-genre-field {
-    float: right;
-    margin-right: 52px;
-    width: 252px;
-=======
 #text-fields ul li > #add-genre-field
 {
 	float: right;
@@ -140,42 +157,41 @@
     text-align: center;
     float: left; 
     display: none;
->>>>>>> 8c9d5d39096c5e1bfcbd0810fc638ee14de8b65a
 }
 
-#add-form #block-logo {
+#add-form #block-logo
+{
     float: right;
-    width: 200px;
+	width: 200px;
     margin: 2% 4% 0 0;
 }
 
-#add-form #block-logo>sub {
-    display: none;
-    padding-left: 50px;
+#add-form #block-logo > sub
+{
+	display: none;
+	padding-left: 50px; 
 }
 
-#add-form form>#response {
-    display: none;
-    text-align: center;
-}
-
-#add-form form>button {
+#add-form form > button
+{
     width: 30%;
-    margin: 0 60% 10px;
+	margin: 0 60% 10px;
     background-color: #fff;
     font-family: 'Oswald', sans-serif;
-    font-size: 17px;
+	font-size: 17px;
     height: 40px;
     background: #0E4FA8;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+	color: #fff;
+	border: none;
+	cursor: pointer;
 }
 
-#add-form form>button:hover {
-    background-color: #2070dc;
+#add-form form > button:hover
+{
+    background-color: #2070dc; 
 }
 
-#footer {
+#footer
+{
     margin-top: 230px;
 }
