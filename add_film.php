@@ -49,7 +49,7 @@
                                         <option value="Аниме">Аниме</option>
                                     </select>
                                 </li>
-                                <li><b>Год:</b><input type="number" value="2017"></li>
+                                <li><b>Год:</b><input type="number" value="2017" id="year-field"></li>
                                 <li><b>Режиссёр:</b><input type="text" id="director-field"></li>
                                 
                                 <center>
@@ -61,6 +61,7 @@
                                 	<b>Описание:</b>
                                 	<textarea name="description" id="film-description" cols="30" rows="10"></textarea>
                             </ul>
+                            <div id="response"></div>
                             <button type="submit" id="add-film">Добавить фильм</button>
 		                </form>
 		            </div>

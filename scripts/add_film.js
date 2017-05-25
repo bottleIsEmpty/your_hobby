@@ -146,7 +146,7 @@ $("#add-film").click(function(event) {
 	var genres = $("#film-genre");
 	var director = $("#director-field");
 	var type = $("#film-rd").prop("checked") ? "f" : "s";
-	var year = $("#director-field")
+	var year = $("#year-field")
 	var description = $("#film-description");
 	
     if (!checkField(name, "film-name")
@@ -173,7 +173,7 @@ $("#add-film").click(function(event) {
 		contentType: false,
 		data: data,
 		success: function(answer){
-			$("html").html(answer);
+			$("#response").html(answer);
 		}
 	})
 });
