@@ -67,7 +67,7 @@
 
     //--Добавление данных в БД--//
 
-    $query = "INSERT INTO movies (title, type, poster, director, year, genre) VALUES ('$name', '$type', '$filename', '$id', '$year', '$genres', '$description')";
+    $query = "INSERT INTO movies (title, type, poster, director, year, genre, description) VALUES ('$name', '$type', '$filename', '$id', '$year', '$genres', '$description')";
 
     mysqli_query($db, $query);
 
