@@ -51,7 +51,6 @@
                                         <option value="Мультфильм">Мультфильм</option>
                                         <option value="Аниме">Аниме</option>
                                     </select>
-<<<<<<< HEAD
                                     </li>
                                     <li><b>Год:</b><input type="number" value="2017" id="year-field"></li>
                                     <li><b>Режиссёр:</b><input type="text" id="director-field"></li>
@@ -72,28 +71,6 @@
                         <div id="block-logo">
                             <img id="logo" src="images/noposter.jpg" width="200">
                             <sub id="delete-logo">
-=======
-                                </li>
-                                <li><b>Год:</b><input type="number" value="2017" id="year-field"></li>
-                                <li><b>Режиссёр:</b><input type="text" id="director-field"></li>
-                                
-                                <center>
-                                    <sup>Не нашли нужного режиссёра? <a href="#" onclick="openWindow()">Добавить режиссёра</a>
-                                    </sup>
-                                </center>
-                                <li><b>Постер:</b><input type="file" id="film-logo"></li>
-                                <li>
-                                	<b>Описание:</b>
-                                	<textarea name="description" id="film-description" cols="30" rows="10"></textarea>
-                            </ul>
-                            <div id="response"></div>
-                            <button type="submit" id="add-film">Добавить фильм</button>
-		                </form>
-		            </div>
-		            <div id="block-logo">
-		            <img id="logo" src="images/noposter.jpg" width="200">
-		            	<sub id="delete-logo">
->>>>>>> 8c9d5d39096c5e1bfcbd0810fc638ee14de8b65a
 		            		<a href="#" onclick="removeLogo()">Удалить логотип</a>
 		            	</sub>
                         </div>
