@@ -1,0 +1,28 @@
+#content {
+    width: 100%;
+    margin-top: 70px;
+}
+
+#content table {
+    font-family: Verdana, 'bold';
+    width: 100%;
+
+}
+
+#content table tr:first-child {
+    height: 40px;
+    background-color: #0E4FA8;
+}
+
+#content table tr {
+    height: 40px;
+}
+
+#content table tr td {
+    padding-left: 20px;
+}
+
+#content table tr:hover:not(:first-child) {
+    background-color: #DFE8F6;    
+    
+}
