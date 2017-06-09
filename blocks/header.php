@@ -7,9 +7,9 @@
 	</div>
 	<div id="menu">
 		<ul>
-			<li><a href="#">Фильмы</a>
+			<li><a href="films.php">Фильмы</a>
 				<ul class="submenu">
-					<li><a>Все фильмы</a></li>
+					<li><a href="films.php">Все фильмы</a></li>
 					<li><a>Мои фильмы</a></li>
 					<li><a href="add_film.php">Добавить фильм</a></li>
 				</ul>

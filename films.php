@@ -25,22 +25,25 @@
             </tr>
             
             <?php
-                $query = "  SELECT * FROM movies INNER JOIN directors ON movies.director = directors.director_id";
+                $query = "SELECT * FROM movies INNER JOIN directors ON movies.director = directors.director_id";
                 $result = mysqli_query($db, $query);
                 
-                for ($i = 1; $row = mysqli_fetch_assoc($result); $i++) {
+                for ($i = 1; $row = mysqli_fetch_assoc($result); $i++):
                     
                 $type = $row['type'] === 'f' ? 'Фильм' : 'Мультфильм';
-                    
-                    echo '<tr><td>' . $i 
-                        . '</td><td>' . $row['title'] 
-                        . '</td><td>' . $type 
-                        . '</td><td>' .$row['year'] . '</td><td>' . $row['name'] . " " . $row['surname'] 
-                        . '</td><td>' . $row['rating'] 
-                        . '</td></tr>';
-                }
-                    
+                
             ?>
+                <tr>
+                    <td><?php echo $i ?></td>
+                    <td><?php echo $row['title'] ?></td> 
+                    <td><?php echo $type ?></td>
+                    <td><?php echo $row['year'] ?></td>
+                    <td><?php echo $row['name'] . " " . $row['surname'] ?></td>
+                    <td><?php echo $row['rating'] ?></td>
+                </tr>
+                
+            <?php endfor; ?>        
+            
             </table>
         </div>
     </div>
