@@ -1,17 +1,17 @@
 <!-- Шапка сайта -->
 
-<link rel="stylesheet" type="text/css" href="css/header.css">
+<link rel="stylesheet" type="text/css" href="/css/header.css">
 <div class="header">
 	<div class="header-top">
-		<a href="index.php">Твоё хобби</a>
+		<a href="/index.php">Твоё хобби</a>
 	</div>
 	<div id="menu">
 		<ul>
 			<li><a href="films.php">Фильмы</a>
 				<ul class="submenu">
-					<li><a href="films.php">Все фильмы</a></li>
+					<li><a href="/films.php/?mode=all">Все фильмы</a></li>
 					<li><a>Мои фильмы</a></li>
-					<li><a href="add_film.php">Добавить фильм</a></li>
+					<li><a href="/add_film.php">Добавить фильм</a></li>
 				</ul>
 			</li>
 			<li><a href="#">Книги</a>
@@ -51,11 +51,11 @@
 				<?php 
 					echo $text;
 					if  ($isAuth) {
-						echo '<a id="signout" href="php/signout.php">Выход</a>';
+						echo '<a id="signout" href="/php/signout.php">Выход</a>';
 					} else if ($text != 'Регистрация' && $text != 'Вход'
 								&& $text != 'Добавление нового фильма') { 	
-						echo '<a id="signin" href="signin.php">Войти</a>
-						<a href="signup.php">Зарегистрироваться</a>';
+						echo '<a id="signin" href="/signin.php">Войти</a>
+						<a href="/signup.php">Зарегистрироваться</a>';
 					} 	
 				?>
 			</h3>

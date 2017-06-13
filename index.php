@@ -1,3 +1,9 @@
+<?php
+	require_once(__DIR__ . '/php/database_connection.php');
+	$text =  $isAuth ? "Привет, <a href=''>$_SESSION[login]</a>, рады тебя видеть!" :
+	"Привет, гость! Можешь войти или зарегистрироваться";
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,9 +14,6 @@
 <body>
 	<div id="wrapper">
 		<?php
-			require_once('php/database_connection.php');
-			$text =  $isAuth ? "Привет, <a href=''>$_SESSION[login]</a>, рады тебя видеть!" :
-			"Привет, гость! Можешь войти или зарегистрироваться";
 		 	require_once('blocks/header.php');
 		?>
 		<div id="content" class="group">

@@ -1,3 +1,7 @@
+<?php
+    require_once('php/database_connection.php');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +13,6 @@
 <body>
 	<div id="wrapper">
 		<?php
-			require_once('php/database_connection.php');
 			$text = "Добавление нового фильма";
 			require_once('blocks/header.php');
 		?>
@@ -37,6 +40,7 @@
                                 <li>Добавить жанр: 
                                     <select id="add-genre-field">
                                         <option value="Драма">Драма</option>
+                                        <option value="Криминал">Криминал</option>
                                         <option value="Комедия">Комедия</option>
                                         <option value="Ужасы">Ужасы</option>
                                         <option value="Фэнтези">Фэнтези</option>

@@ -19,7 +19,7 @@
 
     $uploaddir = '../images/uploads/films/';
 	$fileextension = pathinfo($_FILES['logo']['name'], PATHINFO_EXTENSION);
-	$filename = 'film_logo_' . date('U') . '.' . $fileextension;
+	$filename = (isset($_FILES['logo']['name'])) ? 'film_logo_' . date('U') . '.' . $fileextension : '';
 	$uploadfile = $uploaddir . $filename;
 
     //--Проверка на существование данных--//
@@ -54,15 +54,8 @@
 
     //--Если режиссёр существует, то загрузка изображения в постоянную папку--//
 
-    if ($_FILES['logo']['name']) { //Если фотография была загружена пользователем
-        if (!is_dir($uploaddir)) {
-		mkdir($uploaddir, 0777, true);
-        }
-
-        if (!move_uploaded_file($_FILES['logo']['tmp_name'], $uploadfile)) {
-            mysqli_close($db);
-            exit('Файл не был загружен');
-        }
+    if (isset($_FILES['logo']['name'])) { //Если фотография была загружена пользователем
+		move_uploaded_file($_FILES['logo']['tmp_name'], $uploadfile);
     }
 
     //--Добавление данных в БД--//
