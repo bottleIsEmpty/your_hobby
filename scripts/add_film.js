@@ -158,7 +158,7 @@ $("#add-film").click(function(event) {
         return false;
     }
     
-    data = new FormData();
+    var data = new FormData();
 	data.append("name", name.val());
 	data.append("type", type);
 	data.append("genres", genres.val());
@@ -168,7 +168,7 @@ $("#add-film").click(function(event) {
 	data.append("description", description.val());
 	
 	$.ajax({
-		url: "php/add_film_handler.php",
+		url: "/php/add_film_handler.php",
 		cache: false,
 		type: "POST",
 		processData: false,

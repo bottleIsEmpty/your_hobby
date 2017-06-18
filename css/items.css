@@ -1,0 +1,27 @@
+#main {
+    float: right;
+    width: 710px;
+}
+
+.block {
+    /*height: 220px;*/
+    padding: 10px;
+    font-family: "Verdana";
+    border: 1px solid #DFDFDF;
+    color: grey;
+	background-color: #fff;
+}
+
+.block:last-child {
+    border-bottom: 1px solid #DFDFDF;
+}
+
+.block img {
+    float: left;
+}
+
+.description {
+    float: left;
+    margin-left: 30px;
+	width: 505px;
+}

@@ -1,6 +1,6 @@
 <?php
 	require_once(__DIR__ . '/php/database_connection.php');
-	$text =  $isAuth ? "Привет, <a href=''>$_SESSION[login]</a>, рады тебя видеть!" :
+	$text =  $isAuth ? 'Привет, <a href="/users.php?id='. $_SESSION['id'] . '">' . $_SESSION['login'] . "</a>, рады тебя видеть!" :
 	"Привет, гость! Можешь войти или зарегистрироваться";
 ?>
 
@@ -13,51 +13,9 @@
 </head>
 <body>
 	<div id="wrapper">
-		<?php
-		 	require_once('blocks/header.php');
-		?>
+		<?php require_once(__DIR__ . '/blocks/header.php');?>
 		<div id="content" class="group">
-			<div id="search">
-				<div id="search-top">Точный поиск</div>
-				<div id="search-main">
-					<form action="" method="POST" id="search-form">
-						<p>Тип:
-							<select name="type" class="search-field">
-								<option>Фильм</option>
-								<option>Книга</option>
-								<option>Музыка</option>
-							</select>
-						</p>
-						<p>Год: 
-							<span class="small-input">
-								<input type="number" id="year-bottom" class="small-field" min="1930" max="2017"> —
-								<input type="number" id="year-top" class="small-field" min="1930" max="2017">
-							</span>
-						</p>
-						<div id="year-slider"></div>
-						<p>Жанр:
-							<select name="genre" class="search-field">
-								<option>Все</option>
-								<option>Комедия</option>
-								<option>Драма</option>
-								<option>Блокбастер</option>
-								<option>Криминал</option>
-								<option>Вестерн</option>
-								<option>Триллер</option>
-								<option>Ужасы</option>
-							</select>
-						</p>
-						<p>Оценка:
-							<span class="small-input">
-								<input type="number" id="rating-bottom" class="small-field" min="1" max="10"> —
-								<input type="number" id="rating-top" class="small-field" min="1" max="10"><br>
-							</span>
-						</p>
-						<div id="rating-slider"></div>
-						<input type="submit" value="Поиск" id="search-button">
-					</form>
-				</div>
-			</div>
+			<?php require_once(__DIR__ . '/blocks/search.php'); ?>
 			<div id="main">
 				<div id="last-added">
 					Последние добавленные
@@ -171,8 +129,8 @@
 		require_once('blocks/footer.php');
 		mysqli_close($db); 
 	?>
-	<script src="scripts/jquery-3.2.0.js"></script>
-	<script src="scripts/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
-	<script src="scripts/index.js"></script>
+	<script src="/scripts/jquery-3.2.0.js"></script>
+	<script src="/scripts/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+	<script src="/scripts/index.js"></script>
 </body>
 </html>

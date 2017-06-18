@@ -46,19 +46,23 @@
 				<option>Музыка</option>
 			</select>			
 		</form>
-		<div id="greeting">
-			<h3>
-				<?php 
-					echo $text;
-					if  ($isAuth) {
-						echo '<a id="signout" href="/php/signout.php">Выход</a>';
-					} else if ($text != 'Регистрация' && $text != 'Вход'
-								&& $text != 'Добавление нового фильма') { 	
-						echo '<a id="signin" href="/signin.php">Войти</a>
-						<a href="/signup.php">Зарегистрироваться</a>';
-					} 	
-				?>
-			</h3>
-		</div>
+	</div>
+	<div id="greeting">
+		<h3>
+			<?php 
+				echo $text;
+				echo '<span id="links">';
+				if  ($isAuth) {
+
+					echo '<a id="signout"; href="/php/signout.php">Выход</a>';
+				} else if ($text != 'Регистрация' && $text != 'Вход'
+							&& $text != 'Добавление нового фильма') { 	
+					echo '<span id="links">';
+					echo '<a id="signin" href="/signin.php">Войти</a>
+					<a href="/signup.php">Зарегистрироваться</a>';
+				}
+				echo '</span>';
+			?>
+		</h3>
 	</div>
 </div>

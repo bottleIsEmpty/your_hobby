@@ -1,28 +1,137 @@
+/*clearfix*/
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Страница всех фильмов*/
+#wrapper #content #main .block {
+	margin-bottom: 10px;	
+} 
+ 
+
+/*Страница конретного фильма*/
+
 #content {
-    width: 100%;
-    margin-top: 70px;
+	font-family: 'Verdana', bold;
+	
 }
 
-#content table {
-    font-family: Verdana, 'bold';
-    width: 100%;
-
+#content #info-block {
+	background: white;
+	padding: 13px;
+	border: 1px solid #ddd;
 }
 
-#content table tr:first-child {
+#content #rating-block {
+	float: right;
+	text-align: center;
+	color: blue;
+	
+}
+
+#content #left-block {
+	float: left;
+	width: 200px;
+}
+
+#content #info {
+	float: left;
+}
+
+#content #info #info-text {
+	list-style-type: none;
+	margin: 0px;
+}
+
+#content #info #info-text li {
+	margin-bottom: 15px;
+	width: 700px;
+}
+
+#content #info #info-text li:nth-child(-n+2) {
+	width: 400px;
+}
+
+#content .line-between {
+	width: 97%;
+	height: 40px;
+	background-color: #DFE8F6;
+	margin-top: 10px;
+	line-height: 40px;
+	border-bottom: 1px solid #ddd;
+	padding-left: 30px;
+	font-weight: bold;
+}
+
+#content .comment-block {
+	background-color:azure;
+	margin-top: 10px;
+	padding: 20px;
+	border: 1px solid #ddd;
+}
+
+#content .comment-block .comment-info {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 15px;
+}
+
+#content .comment-block .comment-info .user-info {
+	font-size: 22px;
+	float: left;
+}
+
+#content .comment-block .comment-info .user-info a {
+	text-decoration: none;
+}
+
+#content .comment-block .comment-info .user-info a:visited {
+	color: blue;
+}
+
+#content .comment-block .comment-info .user-info a:hover {
+	color: green;
+}
+
+#content .comment-block .comment-info .user-info>span {
+	font-size: 15px;
+}
+
+#content .comment-block .comment-time {
+	width: 250px;
+	float: right;
+	line-height: 40px;
+	text-align: center;
+	background-color: #ddd;
+	color: #555;
+}
+
+#content .comment-block .comment {
+	padding-top: 15px;
+}
+
+#content #comment-field #comment-text {
+	width: 99.5%;
+	height: 200px;
+	font-size: 18px;
+	margin-top: 15px;
+	resize: none;
+}
+
+#content #comment-field button {
+	    font-family: 'Oswald', sans-serif;
+    font-size: 17px;
+    margin: 20px 35%;
+    width: 30%;
     height: 40px;
-    background-color: #0E4FA8;
+    background: #0E4FA8;
+    color: #fff;
+    border: none;
+    cursor: pointer;
 }
 
-#content table tr {
-    height: 40px;
+#content #comment-field button:hover {
+    background-color: #2070dc;
 }
 
-#content table tr td {
-    padding-left: 20px;
-}
-
-#content table tr:hover:not(:first-child) {
-    background-color: #DFE8F6;    
-    
-}

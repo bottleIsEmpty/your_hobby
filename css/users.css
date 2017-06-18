@@ -1,0 +1,55 @@
+/*clearfix*/
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Страница*/
+#tabs #user-info ul {
+	list-style: none;
+	line-height: 40px;
+	padding: 0px;
+}
+
+#tabs .left-column {
+	float: left;
+	width: 48%;
+}
+
+#tabs .right-column {
+	float: right;
+	width: 48%;
+}
+
+#tabs table {
+	width: 100%;
+	/*border: 1px solid grey;*/
+	background-color: #eee;
+	text-align: center;
+	box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+#tabs table tr {
+	height: 50px;
+	border-bottom: 1px solid #fff;
+	cursor: pointer;
+}
+
+#tabs .title {
+	font-weight: bold;
+}
+
+#tabs table tr:hover {
+	background-color: #f4f5f5;
+}
+
+#tabs table tr td {
+	border-bottom: 1px solid #fff;
+	border-right: 1px solid #fff;
+}
+
+#tabs table th {
+	background-color: #ddd;
+	cursor: default;
+}
