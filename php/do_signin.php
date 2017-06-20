@@ -14,7 +14,9 @@
 
 	//--Проверка логина--//
 
-	$result = mysqli_query($db, "SELECT * FROM user WHERE login = '$login'");
+	$query = "SELECT * FROM user WHERE login = '$login'";
+
+	$result = mysqli_query($db, $query);
 
 	if (!mysqli_num_rows($result)) {
 		echo '{"status": false, "error": "Неверный логин или пароль!"}';

@@ -42,6 +42,7 @@
     //--Проверка режиссёра--//
     
     $query = "SELECT director_id FROM directors WHERE name = '$director_name[0]' AND surname = '$director_name[1]'";
+
     $result = mysqli_query($db, $query);
     $row = mysqli_fetch_assoc($result);
         

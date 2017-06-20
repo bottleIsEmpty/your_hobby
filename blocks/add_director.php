@@ -15,8 +15,8 @@
 					<li><b>Фото: </b><input type="file" id="dir-photo"></li>
 				</ul>
 				<p id="error"></p>
-				<button type="submit">Добавить</button>
 			</form>
 		</div>
+		<button id="dir-button" form="add-director" type="submit">Добавить</button>
 	</div>
 </div>

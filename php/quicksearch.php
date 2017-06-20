@@ -12,3 +12,4 @@
 	mysqli_close($db);
 	exit(json_encode($answer));
 ?>
+

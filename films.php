@@ -27,7 +27,9 @@
 			<div id="content">
 				<?php
 				if ($mode === 'all'):
+				
 					$query = "SELECT * FROM movies INNER JOIN directors ON movies.director = directors.director_id";
+				
 					$result = mysqli_query($db, $query);
 					
 					require_once(__DIR__ . '/blocks/search.php');
@@ -50,6 +52,7 @@
 					/*Получение информации о фильме*/	
 				
 					$query = "SELECT * FROM movies INNER JOIN directors ON movies.director = directors.director_id WHERE movie_id = $filmID";
+				
 					$result = mysqli_query($db, $query);
 					$info = mysqli_fetch_assoc($result);
 					
